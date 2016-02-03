@@ -1,0 +1,23 @@
+***,A TEMPLATE        ! title
+
+memory,100m
+
+! atom 1,
+$A=s
+
+! basis set,
+$bset=6-31g
+basis=$bset 
+
+geometry={$A}
+!hf                          ! method(s)
+$meth=hf
+$meth
+
+$str='../input/$A_$bset_$meth.mld'
+put,molden,$str
+
+---                         ! end of file
+
+
+

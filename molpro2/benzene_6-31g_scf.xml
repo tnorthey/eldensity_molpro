@@ -1,0 +1,915 @@
+<?xml version="1.0"?>
+<molpro xmlns="http://www.molpro.net/schema/molpro-output"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:cml="http://www.xml-cml.org/schema"
+  xmlns:stm="http://www.xml-cml.org/schema"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <!--
+
+ Primary working directories    : /tmp/s1267651
+ Secondary working directories  : /tmp/s1267651
+ Wavefunction directory         : /home/s1267651/wfu/
+ Main file repository           : /tmp/s1267651/
+
+ SHA1      : 960ce83de8be0427555cf121dea4debc26c720b5
+ NAME      : 2012.1.960ce83
+ ARCHNAME  : Linux/x86_64
+ FC        : /opt/intel/composer_xe_2013_sp1.2.144/bin/intel64/ifort
+ FCVERSION : 14.0.2
+ BLASLIB   : -Wl,-_start-group /opt/intel/mkl/lib/intel64/libmkl_intel_ilp64.a /opt/intel/mkl/lib/intel64/libmkl_sequential.a /opt/intel/mkl/lib/intel64/libmkl_core.a -Wl,-_end-group
+ id        : edinburgh
+
+ Nodes          nprocs
+ sce-chem-c01105    1
+
+ Using customized tuning parameters: mindgm=7; mindgv=24; mindgc=1; mindgr=1; noblas=0; minvec=7
+ default implementation of scratch files=df  
+
+ --><job>
+  <!--
+ ***,MOLPRO_SCF TEMPLATE
+ 
+ $title=benzene
+ 
+                                                                                 ! basis set,
+ $bset=6-31g
+ basis=$bset
+ 
+ cc2    =     1.300000 ANG
+ cc3    =     1.300000 ANG
+ ccc3   =     120.000
+ cc4    =     1.300000 ANG
+ ccc4   =     120.000
+ dih4   =     0.000
+ cc5    =     1.300000 ANG
+ ccc5   =     120.000
+ dih5   =     0.000
+ cc6    =     1.300000 ANG
+ ccc6   =     120.000
+ dih6   =     0.000
+ hc7    =     1.089000 ANG
+ hcc7   =     120.000
+ dih7   =     180.000
+ hc8    =     1.089000 ANG
+ hcc8   =     120.000
+ dih8   =     180.000
+ hc9    =     1.089000 ANG
+ hcc9   =     120.000
+ dih9   =     180.000
+ hc10   =     1.089000 ANG
+ hcc10  =     120.000
+ dih10  =     180.000
+ hc11   =     1.089000 ANG
+ hcc11  =     120.000
+ dih11  =     180.000
+ hc12   =     1.089000 ANG
+ hcc12  =     120.000
+ dih12  =     180.000
+ 
+ symmetry,nosym
+ 
+ geometry={
+  c
+  c    1 cc2
+  c    1 cc3         2 ccc3
+  c    3 cc4         1 ccc4          2 dih4
+  c    4 cc5         3 ccc5          1 dih5
+  c    5 cc6         4 ccc6          3 dih6
+  h    1 hc7         2 hcc7          6 dih7
+  h    2 hc8         6 hcc8          5 dih8
+  h    6 hc9         5 hcc9          4 dih9
+  h    5 hc10        4 hcc10         3 dih10
+  h    4 hc11        5 hcc11         6 dih11
+  h    3 hc12        4 hcc12         5 dih12
+ }
+                                                                                 ! wave function here,
+ hf
+ optg
+ 
+ $title='../input/$title_$bset_scf.mld'
+ put,molden,$title
+ 
+
+ Variables initialized (778), CPU time= 0.00 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 516 directives.
+ Default parameters read. Elapsed time= 0.03 sec
+
+ Checking input...
+ Passed
+1
+
+
+                                         ***  PROGRAM SYSTEM MOLPRO  ***
+                         Copyright, University College Cardiff Consultants Limited, 2008
+
+                                    Version 2012.1 linked Apr  1 2014 15:33:03
+
+
+ **********************************************************************************************************************************
+ LABEL *   MOLPRO_SCF TEMPLATE                                                           
+ Linux-3.2.0-93-generic/sce-chem-c01105(x86_64) 64 bit serial version                    DATE: 11-Nov-15          TIME: 12:00:53  
+ **********************************************************************************************************************************
+
+ SHA1:             960ce83de8be0427555cf121dea4debc26c720b5
+ **********************************************************************************************************************************
+  -->
+  <!--
+ SETTING TITLE          =    BENZENE
+ SETTING BSET           =    6-31G
+
+ Variable memory set to    8000000 words,  buffer space   230000 words
+
+ SETTING BASIS          =    $BSET
+ SETTING CC2            =         1.30000000  ANG                             
+ SETTING CC3            =         1.30000000  ANG                             
+ SETTING CCC3           =       120.00000000                                  
+ SETTING CC4            =         1.30000000  ANG                             
+ SETTING CCC4           =       120.00000000                                  
+ SETTING DIH4           =         0.00000000                                  
+ SETTING CC5            =         1.30000000  ANG                             
+ SETTING CCC5           =       120.00000000                                  
+ SETTING DIH5           =         0.00000000                                  
+ SETTING CC6            =         1.30000000  ANG                             
+ SETTING CCC6           =       120.00000000                                  
+ SETTING DIH6           =         0.00000000                                  
+ SETTING HC7            =         1.08900000  ANG                             
+ SETTING HCC7           =       120.00000000                                  
+ SETTING DIH7           =       180.00000000                                  
+ SETTING HC8            =         1.08900000  ANG                             
+ SETTING HCC8           =       120.00000000                                  
+ SETTING DIH8           =       180.00000000                                  
+ SETTING HC9            =         1.08900000  ANG                             
+ SETTING HCC9           =       120.00000000                                  
+ SETTING DIH9           =       180.00000000                                  
+ SETTING HC10           =         1.08900000  ANG                             
+ SETTING HCC10          =       120.00000000                                  
+ SETTING DIH10          =       180.00000000                                  
+ SETTING HC11           =         1.08900000  ANG                             
+ SETTING HCC11          =       120.00000000                                  
+ SETTING DIH11          =       180.00000000                                  
+ SETTING HC12           =         1.08900000  ANG                             
+ SETTING HCC12          =       120.00000000                                  
+ SETTING DIH12          =       180.00000000                                  
+ ZSYMEL=NOSYM
+ 
+  --><jobstep command="HF-SCF" commandset="SCFPRO">
+   <!--
+
+
+ Current variables in basis input:
+
+ Set= 1  $BSET               =  6-31G
+
+ Recomputing integrals since basis changed
+
+
+ Using spherical harmonics
+
+ Library entry C      S 6-31G                selected for orbital group  1
+ Library entry C      P 6-31G                selected for orbital group  1
+ Library entry H      S 6-31G                selected for orbital group  2
+
+1PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Symmetric top,     Order of principal axis = 6
+ Rotational constants:       6.4664771      6.4664771      3.2332386 GHz  (calculated with average atomic masses)
+
+ Point group  C1  
+
+
+   --><cml:symmetry pointGroup="C1"/><!--
+   --><cml:atomArray>
+    <cml:atom id="a1" elementType="C" x3="1.3" y3="0.0" z3="0.0"/>
+    <cml:atom id="a2" elementType="C" x3="0.649999999999999" y3="-1.12583302491977" z3="0.0"/>
+    <cml:atom id="a3" elementType="C" x3="0.649999999999999" y3="1.12583302491977" z3="0.0"/>
+    <cml:atom id="a4" elementType="C" x3="-0.65" y3="1.12583302491977" z3="0.0"/>
+    <cml:atom id="a5" elementType="C" x3="-1.3" y3="-0.470003777230943E-15" z3="0.0"/>
+    <cml:atom id="a6" elementType="C" x3="-0.649999999999999" y3="-1.12583302491977" z3="0.0"/>
+    <cml:atom id="a7" elementType="H" x3="2.389" y3="-0.470003777230943E-15" z3="0.0"/>
+    <cml:atom id="a8" elementType="H" x3="1.1945" y3="-2.06893468964102" z3="0.0"/>
+    <cml:atom id="a9" elementType="H" x3="-1.1945" y3="-2.06893468964103" z3="0.0"/>
+    <cml:atom id="a10" elementType="H" x3="-2.389" y3="-0.705005665846414E-15" z3="0.0"/>
+    <cml:atom id="a11" elementType="H" x3="-1.1945" y3="2.06893468964102" z3="0.0"/>
+    <cml:atom id="a12" elementType="H" x3="1.1945" y3="2.06893468964102" z3="0.0"/>
+   </cml:atomArray><!--
+   --><cml:bondArray>
+    <cml:bond atomRefs2="a1 a2"/>
+    <cml:bond atomRefs2="a1 a3"/>
+    <cml:bond atomRefs2="a3 a4"/>
+    <cml:bond atomRefs2="a4 a5"/>
+    <cml:bond atomRefs2="a2 a6"/>
+    <cml:bond atomRefs2="a5 a6"/>
+    <cml:bond atomRefs2="a1 a7"/>
+    <cml:bond atomRefs2="a2 a8"/>
+    <cml:bond atomRefs2="a6 a9"/>
+    <cml:bond atomRefs2="a5 a10"/>
+    <cml:bond atomRefs2="a4 a11"/>
+    <cml:bond atomRefs2="a3 a12"/>
+   </cml:bondArray><!--
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    2.456643971    0.000000000    0.000000000
+   2  C       6.00    1.228321985   -2.127516087    0.000000000
+   3  C       6.00    1.228321985    2.127516087    0.000000000
+   4  C       6.00   -1.228321985    2.127516087    0.000000000
+   5  C       6.00   -2.456643971   -0.000000000    0.000000000
+   6  C       6.00   -1.228321985   -2.127516087    0.000000000
+   7  H       1.00    4.514555728   -0.000000000    0.000000000
+   8  H       1.00    2.257277864   -3.909719947    0.000000000
+   9  H       1.00   -2.257277864   -3.909719947    0.000000000
+  10  H       1.00   -4.514555728   -0.000000000    0.000000000
+  11  H       1.00   -2.257277864    3.909719947    0.000000000
+  12  H       1.00    2.257277864    3.909719947    0.000000000
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.456643971  1-3  2.456643971  1-7  2.057911757  2-6  2.456643971  2-8  2.057911757
+     ( 1.300000000)     ( 1.300000000)     ( 1.089000000)     ( 1.300000000)     ( 1.089000000)
+
+  3- 4  2.456643971   3-12  2.057911757   4- 5  2.456643971   4-11  2.057911757   5- 6  2.456643971
+       ( 1.300000000)       ( 1.089000000)       ( 1.300000000)       ( 1.089000000)       ( 1.300000000)
+
+  5-10  2.057911757   6- 9  2.057911757
+       ( 1.089000000)       ( 1.089000000)
+
+ Bond angles
+
+  1- 2- 6  120.00000000   1- 2- 8  120.00000000   1- 3- 4  120.00000000   1- 3-12  120.00000000
+
+  2-1-3  120.00000000   2-1-7  120.00000000   2-6-5  120.00000000   2-6-9  120.00000000
+
+  3- 1- 7  120.00000000   3- 4- 5  120.00000000   3- 4-11  120.00000000   4- 3-12  120.00000000
+
+  4- 5- 6  120.00000000   4- 5-10  120.00000000   5- 4-11  120.00000000   5- 6- 9  120.00000000
+
+  6- 2- 8  120.00000000   6- 5-10  120.00000000
+
+ NUCLEAR CHARGE:                   42
+ NUMBER OF PRIMITIVE AOS:         156
+ NUMBER OF SYMMETRY AOS:          156
+ NUMBER OF CONTRACTIONS:           66   (  66A   )
+ NUMBER OF CORE ORBITALS:           6   (   6A   )
+ NUMBER OF VALENCE ORBITALS:       30   (  30A   )
+
+
+ NUCLEAR REPULSION ENERGY  215.90383982
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 1 1 1 2 1 1 2 1   1 1 1 1 2 1 1 2 1 1   1 1 1 2 1 1 2 1 1 1   1 1 2 1 1 2 1 1 1 1
+                                        1 2 1 1 2 1 1 1 1 1   2 1 1 2 1 1 1 1 1 1   1 1 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.344E-03 0.344E-02 0.394E-02 0.394E-02 0.598E-02 0.598E-02 0.155E-01 0.155E-01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     7.864 MB (compressed) written to integral file ( 33.5%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:    2445366.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:    2445366      RECORD LENGTH: 524288
+
+ Memory used in sort:       3.00 MW
+
+ SORT1 READ     2895470. AND WROTE     1365277. INTEGRALS IN      4 RECORDS. CPU TIME:     0.03 SEC, REAL TIME:     0.04 SEC
+ SORT2 READ     1365277. AND WROTE     2445366. INTEGRALS IN     30 RECORDS. CPU TIME:     0.06 SEC, REAL TIME:     0.07 SEC
+
+ FILE SIZES:   FILE 1:    15.7 MBYTE,  FILE 4:    16.8 MBYTE,   TOTAL:     32.5 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19       14.18       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+ PROGRAMS   *        TOTAL       INT
+ CPU TIMES  *         0.77      0.69
+ REAL TIME  *         0.82 SEC
+ DISK USED  *        33.00 MB      
+ **********************************************************************************************************************************
+
+1PROGRAM * RHF-SCF (CLOSED SHELL)       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:      21+   21-    SPACE SYMMETRY=1    SPIN SYMMETRY: Singlet 
+ CONVERGENCE THRESHOLDS:    1.00E-06 (Density)    1.00E-07 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.00 (CLOSED)  0.00 (OPEN) 
+
+
+
+ Orbital guess generated from atomic densities. Full valence occupancy:   21
+
+ Molecular orbital dump at record        2100.2
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS   ORB.
+    1      0.000D+00      0.000D+00      -230.51047125    586.971891   -0.00000    0.00000   -0.00000    0    start
+    2      0.000D+00      0.632D-02      -230.56094728    580.471121    0.00000    0.00000   -0.00000    1    diag
+    3      0.134D-01      0.211D-02      -230.56598792    582.642739    0.00000    0.00000   -0.00000    2    diag
+    4      0.373D-02      0.499D-03      -230.56639523    582.322589    0.00000    0.00000    0.00000    3    diag
+    5      0.166D-02      0.369D-04      -230.56639789    582.323814    0.00000   -0.00000   -0.00000    4    diag
+    6      0.132D-03      0.362D-05      -230.56639791    582.323609   -0.00000    0.00000   -0.00000    5    diag
+    7      0.103D-04      0.334D-06      -230.56639791    582.323671   -0.00000   -0.00000   -0.00000    6    diag
+    8      0.770D-06      0.338D-07      -230.56639791    582.323658   -0.00000    0.00000    0.00000    0    orth
+
+ Final occupancy:  21
+
+ !RHF STATE 1.1 Energy               -230.566397909443
+   --><property name="Energy" method="RHF" principal="true" stateSymmetry="1" stateNumber="1"
+     value="-230.566397909443"/><!--
+ Nuclear energy                       215.90383982
+ One-electron energy                 -737.63206660
+ Two-electron energy                  291.16182887
+ Virial quotient                       -0.99181962
+ !RHF STATE 1.1 Dipole moment          -0.00000000     0.00000000     0.00000000
+ Dipole moment /Debye                  -0.00000000     0.00000000     0.00000000
+   --><property name="Dipole moment" method="RHF" principal="true" stateSymmetry="1"
+     stateNumber="1"
+     value="-0.590638649100583E-13 0.158095758706622E-12 0.100213822443625E-14"/><!--
+
+ Orbital energies:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1          8.1          9.1         10.1
+    -11.212853   -11.211935   -11.211935   -11.209981   -11.209981   -11.209039    -1.219029    -1.047240    -1.047240    -0.836659
+
+        11.1         12.1         13.1         14.1         15.1         16.1         17.1         18.1         19.1         20.1
+     -0.836659    -0.735785    -0.657390    -0.606258    -0.594453    -0.594453    -0.544416    -0.480843    -0.480843    -0.353605
+
+        21.1         22.1         23.1
+     -0.353605     0.171405     0.171405
+
+ HOMO     21.1    -0.353605 =      -9.6221eV
+ LUMO     22.1     0.171405 =       4.6642eV
+ LUMO-HOMO         0.525009 =      14.2862eV
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19       14.18       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       4        0.56       700     1000      520     2100   
+                                         GEOM     BASIS   MCVARS     RHF  
+
+ PROGRAMS   *        TOTAL        HF       INT
+ CPU TIMES  *         0.97      0.20      0.69
+ REAL TIME  *         1.03 SEC
+ DISK USED  *        33.00 MB      
+ **********************************************************************************************************************************
+   -->
+   <time start="12:00:53" end="12:00:54" cpu="0.97" system="0.06" real="1.03"/>
+   <storage units="megabyte" memory="65.84" sf="0.0" df="33.0" eaf="0.0"/>
+  </jobstep><!--
+  --><jobstep command="OPTG" commandset="OPT">
+   <!--
+
+
+ PROGRAM * OPT (Geometry optimization)     Authors: F. Eckert and H.-J. Werner
+
+
+ BFGS update of hessian
+
+ *** Long output written to logfile /home/s1267651/phd_mini_30Sept2015/amino_acids/molpro2/benzene_6-31g_scf.log ***
+
+
+ Geometry optimization using default procedure for command HF-SCF
+
+ Geometry written to block  1 of record 700
+   --><gradient name="SCF GRADIENT" stateSymmetry="1" stateNumber="1"
+     virial="-1.69437034638346">
+     -0.133247738301   0.000000000000  -0.000000000000
+     -0.066623869989   0.115395925942  -0.000000000000
+     -0.066623869989  -0.115395925942  -0.000000000000
+      0.066623869989  -0.115395925942   0.000000000000
+      0.133247738301  -0.000000000000   0.000000000000
+      0.066623869989   0.115395925942  -0.000000000000
+      0.009956061565   0.000000000000   0.000000000000
+      0.004978031144  -0.008622202226   0.000000000000
+     -0.004978031144  -0.008622202226   0.000000000000
+     -0.009956061565   0.000000000000  -0.000000000000
+     -0.004978031144   0.008622202226   0.000000000000
+      0.004978031144   0.008622202226   0.000000000000
+   </gradient><!--
+
+ Making model hessian for Z-matrix coordinates
+
+ Quadratic Steepest Descent - Minimum Search
+   --><opt energy="-230.56639791" type="HF-SCF000" line="0.0"
+     convergence="0.299224250936489" gradient="0.908538136968559"/><!--
+   --><jobstep command="HF-SCF" commandset="SCFPRO">
+    <!--
+    --><cml:symmetry pointGroup="C1"/><!--
+    --><cml:atomArray>
+     <cml:atom id="a1" elementType="C" x3="1.36958839463836" y3="0.0" z3="0.0"/>
+     <cml:atom id="a2" elementType="C" x3="0.684794186000219" y3="-1.18609832439685" z3="0.0"/>
+     <cml:atom id="a3" elementType="C" x3="0.684794146093476" y3="1.18609837251645" z3="0.0"/>
+     <cml:atom id="a4" elementType="C" x3="-0.684794239032332" y3="1.18609829695436" z3="0.0"/>
+     <cml:atom id="a5" elementType="C" x3="-1.36958835876249" y3="-0.609477027996251E-07"
+       z3="0.0"/>
+     <cml:atom id="a6" elementType="C" x3="-0.684794179562726" y3="-1.18609831335486" z3="0.0"/>
+     <cml:atom id="a7" elementType="H" x3="2.4466184996264" y3="0.698689120582886E-08"
+       z3="0.0"/>
+     <cml:atom id="a8" elementType="H" x3="1.22330941009064" y3="-2.11883354750498" z3="0.0"/>
+     <cml:atom id="a9" elementType="H" x3="-1.22330912974358" y3="-2.11883358543109" z3="0.0"/>
+     <cml:atom id="a10" elementType="H" x3="-2.44661827465666" y3="-0.990800634715402E-07"
+       z3="0.0"/>
+     <cml:atom id="a11" elementType="H" x3="-1.22330906589284" y3="2.11883374940327" z3="0.0"/>
+     <cml:atom id="a12" elementType="H" x3="1.22330916384876" y3="2.11883382392536" z3="0.0"/>
+    </cml:atomArray><!--
+    --><cml:bondArray>
+     <cml:bond atomRefs2="a1 a2"/>
+     <cml:bond atomRefs2="a1 a3"/>
+     <cml:bond atomRefs2="a3 a4"/>
+     <cml:bond atomRefs2="a4 a5"/>
+     <cml:bond atomRefs2="a2 a6"/>
+     <cml:bond atomRefs2="a5 a6"/>
+     <cml:bond atomRefs2="a1 a7"/>
+     <cml:bond atomRefs2="a2 a8"/>
+     <cml:bond atomRefs2="a6 a9"/>
+     <cml:bond atomRefs2="a5 a10"/>
+     <cml:bond atomRefs2="a4 a11"/>
+     <cml:bond atomRefs2="a3 a12"/>
+    </cml:bondArray><!--
+    --><property name="Energy" method="RHF" principal="true" stateSymmetry="1" stateNumber="1"
+      value="-230.622151627479"/><!--
+    --><property name="Dipole moment" method="RHF" principal="true" stateSymmetry="1"
+      stateNumber="1"
+      value="0.169762404134133E-07 0.114146465612919E-07 -0.514940623764871E-14"/><!--
+    -->
+    <time start="12:00:57" end="12:00:58" cpu="3.48" system="0.04" real="3.53"/>
+    <storage units="megabyte" memory="65.84" sf="0.0" df="33.0" eaf="0.0"/>
+   </jobstep><!--
+
+ ITER.   ENERGY(OLD)    ENERGY(NEW)      DE          GRADMAX     GRADNORM    GRADRMS     STEPMAX     STEPLEN     STEPRMS   CPU-time
+   1  -230.56639791  -230.62215163    -0.05575372  0.52461005  0.90853814  0.16587561  0.13150311  0.29922425  0.00997414      3.48
+   --><gradient name="SCF GRADIENT" stateSymmetry="1" stateNumber="1"
+     virial="-0.306396904412731">
+     -0.024284287598  -0.000000060156   0.000000000000
+     -0.012142202688   0.021030761755  -0.000000000000
+     -0.012142194839  -0.021030780153   0.000000000000
+      0.012142075331  -0.021030831206  -0.000000000000
+      0.024284256605  -0.000000058758   0.000000000000
+      0.012142080062   0.021030810588   0.000000000000
+      0.002549063985  -0.000000000096  -0.000000000000
+      0.001274528053  -0.002207474654  -0.000000000000
+     -0.001274462003  -0.002207431908  -0.000000000000
+     -0.002548923228  -0.000000000348  -0.000000000000
+     -0.001274465509   0.002207510909  -0.000000000000
+      0.001274531830   0.002207554027   0.000000000000
+   </gradient><!--
+   --><opt energy="-230.62215163" type="HF-SCF000" line="0.0"
+     convergence="0.646541042371387E-01" gradient="0.167405933830816"/><!--
+   --><jobstep command="HF-SCF" commandset="SCFPRO">
+    <!--
+    --><cml:symmetry pointGroup="C1"/><!--
+    --><cml:atomArray>
+     <cml:atom id="a1" elementType="C" x3="1.38455651093314" y3="0.642739646150963E-03"
+       z3="0.0"/>
+     <cml:atom id="a2" elementType="C" x3="0.692864138503341" y3="-1.19928241304853" z3="0.0"/>
+     <cml:atom id="a3" elementType="C" x3="0.691700395047092" y3="1.19882714813048" z3="0.0"/>
+     <cml:atom id="a4" elementType="C" x3="-0.691923250503932" y3="1.19869853338963" z3="0.0"/>
+     <cml:atom id="a5" elementType="C" x3="-1.38455659489136" y3="0.385359889280292E-03"
+       z3="0.0"/>
+     <cml:atom id="a6" elementType="C" x3="-0.692641199146908" y3="-1.19941117525302" z3="0.0"/>
+     <cml:atom id="a7" elementType="H" x3="2.45800148340305" y3="0.133157388951568E-02"
+       z3="0.0"/>
+     <cml:atom id="a8" elementType="H" x3="1.22992265629074" y3="-2.12870632106919" z3="0.0"/>
+     <cml:atom id="a9" elementType="H" x3="-1.2295268616666" y3="-2.12893490986257" z3="0.0"/>
+     <cml:atom id="a10" elementType="H" x3="-2.4580016223853" y3="0.874637569224719E-03"
+       z3="0.0"/>
+     <cml:atom id="a11" elementType="H" x3="-1.22848268456" y3="2.12843633540674" z3="0.0"/>
+     <cml:atom id="a12" elementType="H" x3="1.2280870296167" y3="2.12866468088329" z3="0.0"/>
+    </cml:atomArray><!--
+    --><cml:bondArray>
+     <cml:bond atomRefs2="a1 a2"/>
+     <cml:bond atomRefs2="a1 a3"/>
+     <cml:bond atomRefs2="a3 a4"/>
+     <cml:bond atomRefs2="a4 a5"/>
+     <cml:bond atomRefs2="a2 a6"/>
+     <cml:bond atomRefs2="a5 a6"/>
+     <cml:bond atomRefs2="a1 a7"/>
+     <cml:bond atomRefs2="a2 a8"/>
+     <cml:bond atomRefs2="a6 a9"/>
+     <cml:bond atomRefs2="a5 a10"/>
+     <cml:bond atomRefs2="a4 a11"/>
+     <cml:bond atomRefs2="a3 a12"/>
+    </cml:bondArray><!--
+    --><property name="Energy" method="RHF" principal="true" stateSymmetry="1" stateNumber="1"
+      value="-230.624383289448"/><!--
+    --><property name="Dipole moment" method="RHF" principal="true" stateSymmetry="1"
+      stateNumber="1"
+      value="-0.101915271777386E-07 0.446596872016869E-04 -0.211513946031622E-14"/><!--
+    -->
+    <time start="12:01:00" end="12:01:01" cpu="3.36" system="0.06" real="3.41"/>
+    <storage units="megabyte" memory="65.84" sf="0.0" df="33.0" eaf="0.0"/>
+   </jobstep><!--
+   2  -230.62215163  -230.62438329    -0.00223166  0.09743507  0.16740593  0.03056400  0.02914683  0.06465410  0.00215514      6.84
+   --><gradient name="SCF GRADIENT" stateSymmetry="1" stateNumber="1"
+     virial="-0.650151213765979E-01">
+     -0.004268515718   0.000849133890  -0.000000000000
+     -0.001373116234   0.003263222812   0.000000000000
+     -0.002870817102  -0.004132337985   0.000000000000
+      0.002871556789  -0.004131814346   0.000000000000
+      0.004268347069   0.000849929337  -0.000000000000
+      0.001372471354   0.003263494005  -0.000000000000
+      0.000069337884   0.000024467875   0.000000000000
+      0.000051277182  -0.000062519749   0.000000000000
+     -0.000051243744  -0.000062515161   0.000000000000
+     -0.000069300695   0.000024452784  -0.000000000000
+     -0.000019057092   0.000057234773  -0.000000000000
+      0.000019060307   0.000057251766  -0.000000000000
+   </gradient><!--
+   --><opt energy="-230.62438329" type="HF-SCF000" line="0.0"
+     convergence="0.156843224837962E-01" gradient="0.258390500412382E-01"/><!--
+   --><jobstep command="HF-SCF" commandset="SCFPRO">
+    <!--
+    --><cml:symmetry pointGroup="C1"/><!--
+    --><cml:atomArray>
+     <cml:atom id="a1" elementType="C" x3="1.38808380876197" y3="0.928471334877463E-04"
+       z3="0.0"/>
+     <cml:atom id="a2" elementType="C" x3="0.694132454108719" y3="-1.20224495508731" z3="0.0"/>
+     <cml:atom id="a3" elementType="C" x3="0.693963259782991" y3="1.20201376897144" z3="0.0"/>
+     <cml:atom id="a4" elementType="C" x3="-0.69384446962668" y3="1.2020823426583" z3="0.0"/>
+     <cml:atom id="a5" elementType="C" x3="-1.38808379253317" y3="0.230025297955718E-03"
+       z3="0.0"/>
+     <cml:atom id="a6" elementType="C" x3="-0.694251261197348" y3="-1.20217634919688" z3="0.0"/>
+     <cml:atom id="a7" elementType="H" x3="2.46121883294559" y3="0.317935926019007E-04"
+       z3="0.0"/>
+     <cml:atom id="a8" elementType="H" x3="1.23063986633269" y3="-2.13162177217383" z3="0.0"/>
+     <cml:atom id="a9" elementType="H" x3="-1.23085053325448" y3="-2.13150013297676" z3="0.0"/>
+     <cml:atom id="a10" elementType="H" x3="-2.46121881525786" y3="0.275041740644166E-03"
+       z3="0.0"/>
+     <cml:atom id="a11" elementType="H" x3="-1.23038082260429" y3="2.13148216430286" z3="0.0"/>
+     <cml:atom id="a12" elementType="H" x3="1.2305914802216" y3="2.13136055418262" z3="0.0"/>
+    </cml:atomArray><!--
+    --><cml:bondArray>
+     <cml:bond atomRefs2="a1 a2"/>
+     <cml:bond atomRefs2="a1 a3"/>
+     <cml:bond atomRefs2="a3 a4"/>
+     <cml:bond atomRefs2="a4 a5"/>
+     <cml:bond atomRefs2="a2 a6"/>
+     <cml:bond atomRefs2="a5 a6"/>
+     <cml:bond atomRefs2="a1 a7"/>
+     <cml:bond atomRefs2="a2 a8"/>
+     <cml:bond atomRefs2="a6 a9"/>
+     <cml:bond atomRefs2="a5 a10"/>
+     <cml:bond atomRefs2="a4 a11"/>
+     <cml:bond atomRefs2="a3 a12"/>
+    </cml:bondArray><!--
+    --><property name="Energy" method="RHF" principal="true" stateSymmetry="1" stateNumber="1"
+      value="-230.624474274801"/><!--
+    --><property name="Dipole moment" method="RHF" principal="true" stateSymmetry="1"
+      stateNumber="1"
+      value="-0.615819129023976E-08 -0.776875770767127E-04 -0.157886196452253E-14"/><!--
+    -->
+    <time start="12:01:04" end="12:01:05" cpu="3.34" system="0.04" real="3.39"/>
+    <storage units="megabyte" memory="65.84" sf="0.0" df="33.0" eaf="0.0"/>
+   </jobstep><!--
+   3  -230.62438329  -230.62447427    -0.00009099  0.01429781  0.02583905  0.00471754  0.00790676  0.01568432  0.00052281     10.18
+   --><gradient name="SCF GRADIENT" stateSymmetry="1" stateNumber="1"
+     virial="-0.510075556494789E-02">
+     -0.000121504308   0.000288008589   0.000000000000
+      0.000198126568  -0.000037853139  -0.000000000000
+     -0.000303396024  -0.000234469488   0.000000000000
+      0.000303363723  -0.000234503917   0.000000000000
+      0.000121532392   0.000287991373   0.000000000000
+     -0.000198124327  -0.000037833415  -0.000000000000
+     -0.000118400996  -0.000018990243  -0.000000000000
+     -0.000071652652   0.000103318472  -0.000000000000
+      0.000071658967   0.000103312821   0.000000000000
+      0.000118400863  -0.000018997462  -0.000000000000
+      0.000047678844  -0.000099994091  -0.000000000000
+     -0.000047683050  -0.000099989500  -0.000000000000
+   </gradient><!--
+   --><opt energy="-230.62447427" type="HF-SCF000" line="0.0"
+     convergence="0.137055563755259E-02" gradient="0.918485615551386E-03"/><!--
+   --><jobstep command="HF-SCF" commandset="SCFPRO">
+    <!--
+    --><cml:symmetry pointGroup="C1"/><!--
+    --><cml:atomArray>
+     <cml:atom id="a1" elementType="C" x3="1.38830303745948" y3="-0.1062280409677E-03"
+       z3="0.0"/>
+     <cml:atom id="a2" elementType="C" x3="0.694060770161555" y3="-1.20238680804722" z3="0.0"/>
+     <cml:atom id="a3" elementType="C" x3="0.694241892941377" y3="1.20221988681706" z3="0.0"/>
+     <cml:atom id="a4" elementType="C" x3="-0.694003057269894" y3="1.20235777700294" z3="0.0"/>
+     <cml:atom id="a5" elementType="C" x3="-1.38830302990721" y3="0.169560280548333E-03"
+       z3="0.0"/>
+     <cml:atom id="a6" elementType="C" x3="-0.694299612841035" y3="-1.20224891187473" z3="0.0"/>
+     <cml:atom id="a7" elementType="H" x3="2.46155449947023" y3="-0.241678700091434E-03"
+       z3="0.0"/>
+     <cml:atom id="a8" elementType="H" x3="1.23057698590546" y3="-2.13190461815049" z3="0.0"/>
+     <cml:atom id="a9" elementType="H" x3="-1.23100046359498" y3="-2.13166012787818" z3="0.0"/>
+     <cml:atom id="a10" elementType="H" x3="-2.46155449842621" y3="0.247302387411678E-03"
+       z3="0.0"/>
+     <cml:atom id="a11" elementType="H" x3="-1.2305550050182" y3="2.13187037115753" z3="0.0"/>
+     <cml:atom id="a12" elementType="H" x3="1.23097847517785" y3="2.13162587870215" z3="0.0"/>
+    </cml:atomArray><!--
+    --><cml:bondArray>
+     <cml:bond atomRefs2="a1 a2"/>
+     <cml:bond atomRefs2="a1 a3"/>
+     <cml:bond atomRefs2="a3 a4"/>
+     <cml:bond atomRefs2="a4 a5"/>
+     <cml:bond atomRefs2="a2 a6"/>
+     <cml:bond atomRefs2="a5 a6"/>
+     <cml:bond atomRefs2="a1 a7"/>
+     <cml:bond atomRefs2="a2 a8"/>
+     <cml:bond atomRefs2="a6 a9"/>
+     <cml:bond atomRefs2="a5 a10"/>
+     <cml:bond atomRefs2="a4 a11"/>
+     <cml:bond atomRefs2="a3 a12"/>
+    </cml:bondArray><!--
+    --><property name="Energy" method="RHF" principal="true" stateSymmetry="1" stateNumber="1"
+      value="-230.624474888976"/><!--
+    --><property name="Dipole moment" method="RHF" principal="true" stateSymmetry="1"
+      stateNumber="1"
+      value="-0.274976885705769E-08 -0.302686812339026E-04 -0.690545278374711E-15"/><!--
+    -->
+    <time start="12:01:07" end="12:01:08" cpu="3.35" system="0.03" real="3.38"/>
+    <storage units="megabyte" memory="65.84" sf="0.0" df="33.0" eaf="0.0"/>
+   </jobstep><!--
+   4  -230.62447427  -230.62447489    -0.00000061  0.00046451  0.00091849  0.00016769  0.00082624  0.00137056  0.00004569     13.53
+   --><gradient name="SCF GRADIENT" stateSymmetry="1" stateNumber="1"
+     virial="-0.332792440689729E-03">
+      0.000026711512   0.000060410252  -0.000000000000
+      0.000068444689  -0.000050289763  -0.000000000000
+     -0.000040150846  -0.000005410393   0.000000000000
+      0.000040149746  -0.000005415275   0.000000000000
+     -0.000026697974   0.000060417727  -0.000000000000
+     -0.000068455295  -0.000050279390   0.000000000000
+     -0.000026542032  -0.000007634086  -0.000000000000
+     -0.000018662083   0.000025091894   0.000000000000
+      0.000018666880   0.000025086981   0.000000000000
+      0.000026540080  -0.000007640500   0.000000000000
+      0.000007862083  -0.000022169729  -0.000000000000
+     -0.000007866760  -0.000022167718  -0.000000000000
+   </gradient><!--
+   --><opt energy="-230.62447489" type="HF-SCF000" line="0.0"
+     convergence="0.234336590233777E-03" gradient="0.435853347251584E-03"/><!--
+   --><jobstep command="HF-SCF" commandset="SCFPRO">
+    <!--
+    --><cml:symmetry pointGroup="C1"/><!--
+    --><cml:atomArray>
+     <cml:atom id="a1" elementType="C" x3="1.38830445237368" y3="-0.393395085113246E-03"
+       z3="0.0"/>
+     <cml:atom id="a2" elementType="C" x3="0.693812787085669" y3="-1.20250617345438" z3="0.0"/>
+     <cml:atom id="a3" elementType="C" x3="0.694492101268171" y3="1.20210922983472" z3="0.0"/>
+     <cml:atom id="a4" elementType="C" x3="-0.69380710056142" y3="1.20250471325426" z3="0.0"/>
+     <cml:atom id="a5" elementType="C" x3="-1.38830445243863" y3="0.397575886249319E-03"
+       z3="0.0"/>
+     <cml:atom id="a6" elementType="C" x3="-0.694497787303972" y3="-1.20211068556396" z3="0.0"/>
+     <cml:atom id="a7" elementType="H" x3="2.46158841972889" y3="-0.705270501465196E-03"
+       z3="0.0"/>
+     <cml:atom id="a8" elementType="H" x3="1.23018514876212" y3="-2.13215137527579" z3="0.0"/>
+     <cml:atom id="a9" elementType="H" x3="-1.23139971568186" y3="-2.13145014507353" z3="0.0"/>
+     <cml:atom id="a10" elementType="H" x3="-2.46158842371091" y3="0.697188166539838E-03"
+       z3="0.0"/>
+     <cml:atom id="a11" elementType="H" x3="-1.23018860510445" y3="2.13214788028624" z3="0.0"/>
+     <cml:atom id="a12" elementType="H" x3="1.2314031709596" y3="2.13144664970033" z3="0.0"/>
+    </cml:atomArray><!--
+    --><cml:bondArray>
+     <cml:bond atomRefs2="a1 a2"/>
+     <cml:bond atomRefs2="a1 a3"/>
+     <cml:bond atomRefs2="a3 a4"/>
+     <cml:bond atomRefs2="a4 a5"/>
+     <cml:bond atomRefs2="a2 a6"/>
+     <cml:bond atomRefs2="a5 a6"/>
+     <cml:bond atomRefs2="a1 a7"/>
+     <cml:bond atomRefs2="a2 a8"/>
+     <cml:bond atomRefs2="a6 a9"/>
+     <cml:bond atomRefs2="a5 a10"/>
+     <cml:bond atomRefs2="a4 a11"/>
+     <cml:bond atomRefs2="a3 a12"/>
+    </cml:bondArray><!--
+    --><property name="Energy" method="RHF" principal="true" stateSymmetry="1" stateNumber="1"
+      value="-230.624474904809"/><!--
+    --><property name="Dipole moment" method="RHF" principal="true" stateSymmetry="1"
+      stateNumber="1"
+      value="-0.565450575251703E-09 -0.5394477263998E-05 0.183797267036312E-14"/><!--
+    -->
+    <time start="12:01:10" end="12:01:11" cpu="3.31" system="0.05" real="3.36"/>
+    <storage units="megabyte" memory="65.84" sf="0.0" df="33.0" eaf="0.0"/>
+   </jobstep><!--
+   5  -230.62447489  -230.62447490    -0.00000002  0.00028034  0.00043585  0.00007958  0.00010261  0.00023434  0.00000781     16.84
+
+ END OF GEOMETRY OPTIMIZATION.
+
+ Optimized variables
+ CC2=                 1.38830609 ANG
+ CC3=                 1.38830405 ANG
+ CCC3=              120.00004770 DEGREE
+ CC4=                 1.38829926 ANG
+ CCC4=              120.00013594 DEGREE
+ DIH4=                0.00000000 DEGREE
+ CC5=                 1.38830405 ANG
+ CCC5=              120.00013603 DEGREE
+ DIH5=               -0.00000000 DEGREE
+ CC6=                 1.38830609 ANG
+ CCC6=              120.00004754 DEGREE
+ DIH6=               -0.00000000 DEGREE
+ HC7=                 1.07328401 ANG
+ HCC7=              119.99948911 DEGREE
+ DIH7=              180.00000000 DEGREE
+ HC8=                 1.07328259 ANG
+ HCC8=              119.99974568 DEGREE
+ DIH8=              180.00000000 DEGREE
+ HC9=                 1.07328259 ANG
+ HCC9=              120.00043796 DEGREE
+ DIH9=              180.00000000 DEGREE
+ HC10=                1.07328401 ANG
+ HCC10=             120.00046344 DEGREE
+ DIH10=             180.00000000 DEGREE
+ HC11=                1.07328539 ANG
+ HCC11=             119.99964129 DEGREE
+ DIH11=             180.00000000 DEGREE
+ HC12=                1.07328539 ANG
+ HCC12=             120.00022262 DEGREE
+ DIH12=             180.00000000 DEGREE
+
+ **********************************************************************************************************************************
+
+ Current geometry (xyz format, in Angstrom)
+
+   12
+ HF-SCF000/$BSET  ENERGY=-230.62447490
+ C          1.3883044524       -0.0003933951        0.0000000000
+ C          0.6938127871       -1.2025061735        0.0000000000
+ C          0.6944921013        1.2021092298        0.0000000000
+ C         -0.6938071006        1.2025047133        0.0000000000
+ C         -1.3883044524        0.0003975759        0.0000000000
+ C         -0.6944977873       -1.2021106856        0.0000000000
+ H          2.4615884197       -0.0007052705        0.0000000000
+ H          1.2301851488       -2.1321513753        0.0000000000
+ H         -1.2313997157       -2.1314501451        0.0000000000
+ H         -2.4615884237        0.0006971882        0.0000000000
+ H         -1.2301886051        2.1321478803        0.0000000000
+ H          1.2314031710        2.1314466497        0.0000000000
+
+ **********************************************************************************************************************************
+
+ Geometry written to block  1 of record 700
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19       14.06       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       4        0.56       700     1000      520     2100   
+                                         GEOM     BASIS   MCVARS     RHF  
+
+ PROGRAMS   *        TOTAL      OPTG        HF       INT
+ CPU TIMES  *        17.81     16.83      0.20      0.69
+ REAL TIME  *        18.11 SEC
+ DISK USED  *        33.00 MB      
+ **********************************************************************************************************************************
+   --><time start="12:00:54" end="12:01:11" cpu="16.84" system="0.22" real="17.08"/><!--
+   --><storage units="megabyte" memory="65.84" sf="0.0" df="33.0" eaf="0.0"/><!--
+  --></jobstep><!--
+ SETTING TITLE          =    ../input/TITLE_6-31G_scf.mld  
+
+ Dump information in style MOLDEN to ../input/title_6-31g_scf.mld                                                    
+
+ Molecular orbitals read from record     2100.2  Type=RHF/CANONICAL (state 1.1)
+ Occupation numbers read from record     2100.2  Type=RHF/RHF (state 1.1)
+ Orbital energies read from record       2100.2  Type=RHF/CANONICAL (state 1.1)
+ Redundancy group numbers read from rec  2100.2  Type=RHF/RHF (state 1.1)
+ 
+ DUMP ORBITAL  1.1 AS ORBITAL    1  occ=    2.0000  eig=  -11.2350  GROUP=   2
+ DUMP ORBITAL  2.1 AS ORBITAL    2  occ=    2.0000  eig=  -11.2345  GROUP=   2
+ DUMP ORBITAL  3.1 AS ORBITAL    3  occ=    2.0000  eig=  -11.2345  GROUP=   2
+ DUMP ORBITAL  4.1 AS ORBITAL    4  occ=    2.0000  eig=  -11.2332  GROUP=   2
+ DUMP ORBITAL  5.1 AS ORBITAL    5  occ=    2.0000  eig=  -11.2332  GROUP=   2
+ DUMP ORBITAL  6.1 AS ORBITAL    6  occ=    2.0000  eig=  -11.2326  GROUP=   2
+ DUMP ORBITAL  7.1 AS ORBITAL    7  occ=    2.0000  eig=   -1.1555  GROUP=   2
+ DUMP ORBITAL  8.1 AS ORBITAL    8  occ=    2.0000  eig=   -1.0168  GROUP=   2
+ DUMP ORBITAL  9.1 AS ORBITAL    9  occ=    2.0000  eig=   -1.0168  GROUP=   2
+ DUMP ORBITAL 10.1 AS ORBITAL   10  occ=    2.0000  eig=   -0.8238  GROUP=   2
+ DUMP ORBITAL 11.1 AS ORBITAL   11  occ=    2.0000  eig=   -0.8238  GROUP=   2
+ DUMP ORBITAL 12.1 AS ORBITAL   12  occ=    2.0000  eig=   -0.7135  GROUP=   2
+ DUMP ORBITAL 13.1 AS ORBITAL   13  occ=    2.0000  eig=   -0.6399  GROUP=   2
+ DUMP ORBITAL 14.1 AS ORBITAL   14  occ=    2.0000  eig=   -0.6185  GROUP=   2
+ DUMP ORBITAL 15.1 AS ORBITAL   15  occ=    2.0000  eig=   -0.5881  GROUP=   2
+ DUMP ORBITAL 16.1 AS ORBITAL   16  occ=    2.0000  eig=   -0.5881  GROUP=   2
+ DUMP ORBITAL 17.1 AS ORBITAL   17  occ=    2.0000  eig=   -0.5012  GROUP=   2
+ DUMP ORBITAL 18.1 AS ORBITAL   18  occ=    2.0000  eig=   -0.4882  GROUP=   2
+ DUMP ORBITAL 19.1 AS ORBITAL   19  occ=    2.0000  eig=   -0.4882  GROUP=   2
+ DUMP ORBITAL 20.1 AS ORBITAL   20  occ=    2.0000  eig=   -0.3340  GROUP=   2
+ DUMP ORBITAL 21.1 AS ORBITAL   21  occ=    2.0000  eig=   -0.3340  GROUP=   2
+
+ Total charge:      42.000000
+
+ **********************************************************************************************************************************
+
+        OPTG(HF)        HF-SCF  
+   -230.62447490   -230.56639791
+ **********************************************************************************************************************************
+ Variable memory released
+  --><stm:metadataList>
+   <stm:metadata name="dc:date" content="2015-11-11T12:01:11-00:00"/>
+   <stm:metadata name="dc:creator" content="s1267651"/>
+   <stm:metadata name="dc:title" content="MOLPRO_SCF TEMPLATE"/>
+   <stm:metadata name="cmlm:insilico" content="Molpro"/>
+  </stm:metadataList><!--
+  --><platform>
+   <version major="2012" minor="1" SHA="960ce83de8be0427555cf121dea4debc26c720b5"
+     integer_bits="64" parallelism="serial">
+    2012.1
+    <date year="2015" month="11" day="11" hour="12" minute="0" second="53">
+     2015-11-11T12:00:53
+    </date>
+   </version>
+   <licence id="edinburgh"/>
+   <parallel processes="1" nodes="1" all_processes="1" openmp="1"/>
+   <machine hostname="sce-chem-c01105" architecture="x86_64">
+    Linux-3.2.0-93-generic/sce-chem-c01105(x86_64) 64 bit serial version
+    <sysinfo name="cpu MHz" content="1600.000"/>
+    <sysinfo name="MemTotal" content="16321068 kB"/>
+    <sysinfo name="vendor_id" content="GenuineIntel"/>
+    <sysinfo name="cpu family" content="6"/>
+    <sysinfo name="model name" content="Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz"/>
+    <sysinfo name="flags"
+      content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid"/>
+    <sysinfo name="MemTotal" content="16321068 kB"/>
+    <sysinfo name="cache size" content="6144 KB"/>
+    <sysinfo name="ncpu" content="4"/>
+   </machine>
+  </platform><!--
+  -->
+  <input>
+   <p> ***,MOLPRO_SCF TEMPLATE </p>
+   <p> $title=benzene </p>
+   <p>                                                                                 ! basis set, </p>
+   <p> $bset=6-31g </p>
+   <p> basis=$bset </p>
+   <p> cc2    =     1.300000 ANG </p>
+   <p> cc3    =     1.300000 ANG </p>
+   <p> ccc3   =     120.000 </p>
+   <p> cc4    =     1.300000 ANG </p>
+   <p> ccc4   =     120.000 </p>
+   <p> dih4   =     0.000 </p>
+   <p> cc5    =     1.300000 ANG </p>
+   <p> ccc5   =     120.000 </p>
+   <p> dih5   =     0.000 </p>
+   <p> cc6    =     1.300000 ANG </p>
+   <p> ccc6   =     120.000 </p>
+   <p> dih6   =     0.000 </p>
+   <p> hc7    =     1.089000 ANG </p>
+   <p> hcc7   =     120.000 </p>
+   <p> dih7   =     180.000 </p>
+   <p> hc8    =     1.089000 ANG </p>
+   <p> hcc8   =     120.000 </p>
+   <p> dih8   =     180.000 </p>
+   <p> hc9    =     1.089000 ANG </p>
+   <p> hcc9   =     120.000 </p>
+   <p> dih9   =     180.000 </p>
+   <p> hc10   =     1.089000 ANG </p>
+   <p> hcc10  =     120.000 </p>
+   <p> dih10  =     180.000 </p>
+   <p> hc11   =     1.089000 ANG </p>
+   <p> hcc11  =     120.000 </p>
+   <p> dih11  =     180.000 </p>
+   <p> hc12   =     1.089000 ANG </p>
+   <p> hcc12  =     120.000 </p>
+   <p> dih12  =     180.000 </p>
+   <p> symmetry,nosym </p>
+   <p> geometry={ </p>
+   <p>  c </p>
+   <p>  c    1 cc2 </p>
+   <p>  c    1 cc3         2 ccc3 </p>
+   <p>  c    3 cc4         1 ccc4          2 dih4 </p>
+   <p>  c    4 cc5         3 ccc5          1 dih5 </p>
+   <p>  c    5 cc6         4 ccc6          3 dih6 </p>
+   <p>  h    1 hc7         2 hcc7          6 dih7 </p>
+   <p>  h    2 hc8         6 hcc8          5 dih8 </p>
+   <p>  h    6 hc9         5 hcc9          4 dih9 </p>
+   <p>  h    5 hc10        4 hcc10         3 dih10 </p>
+   <p>  h    4 hc11        5 hcc11         6 dih11 </p>
+   <p>  h    3 hc12        4 hcc12         5 dih12 </p>
+   <p> } </p>
+   <p>                                                                                 ! wave function here, </p>
+   <p> hf </p>
+   <p> optg </p>
+   <p> $title='../input/$title_$bset_scf.mld' </p>
+   <p> put,molden,$title </p>
+  </input>
+  <!--
+ --></job><!--
+--></molpro>

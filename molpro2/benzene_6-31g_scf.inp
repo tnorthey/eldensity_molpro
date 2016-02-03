@@ -1,0 +1,64 @@
+***,MOLPRO_SCF TEMPLATE     ! title
+        
+$title=benzene
+                                               
+! basis set,
+$bset=6-31g
+basis=$bset                                              
+
+cc2    =     1.300000 ANG
+cc3    =     1.300000 ANG
+ccc3   =     120.000
+cc4    =     1.300000 ANG
+ccc4   =     120.000
+dih4   =     0.000
+cc5    =     1.300000 ANG
+ccc5   =     120.000
+dih5   =     0.000
+cc6    =     1.300000 ANG
+ccc6   =     120.000
+dih6   =     0.000
+hc7    =     1.089000 ANG
+hcc7   =     120.000
+dih7   =     180.000
+hc8    =     1.089000 ANG
+hcc8   =     120.000
+dih8   =     180.000
+hc9    =     1.089000 ANG
+hcc9   =     120.000
+dih9   =     180.000
+hc10   =     1.089000 ANG
+hcc10  =     120.000
+dih10  =     180.000
+hc11   =     1.089000 ANG
+hcc11  =     120.000
+dih11  =     180.000
+hc12   =     1.089000 ANG
+hcc12  =     120.000
+dih12  =     180.000
+
+symmetry,nosym
+
+geometry={
+ c
+ c    1 cc2     
+ c    1 cc3         2 ccc3      
+ c    3 cc4         1 ccc4          2 dih4   
+ c    4 cc5         3 ccc5          1 dih5   
+ c    5 cc6         4 ccc6          3 dih6   
+ h    1 hc7         2 hcc7          6 dih7   
+ h    2 hc8         6 hcc8          5 dih8   
+ h    6 hc9         5 hcc9          4 dih9   
+ h    5 hc10        4 hcc10         3 dih10  
+ h    4 hc11        5 hcc11         6 dih11  
+ h    3 hc12        4 hcc12         5 dih12 
+}
+! wave function here,
+hf
+optg
+
+$title='../input/$title_$bset_scf.mld'
+put,molden,$title
+
+---                         ! end of file
+can write notes here :)

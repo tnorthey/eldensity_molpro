@@ -1,0 +1,28 @@
+***,AB TEMPLATE        ! title
+
+memory,100m
+
+! atom 1,
+$A=h
+! atom 2,
+$B=h
+
+! basis set,
+$bset=aug-cc-pv5z
+basis=$bset 
+
+! bond-length
+R=1.38658534 BOHR  ! scf/aug-cc-pvqz H2 bond-distance
+
+geometry={$A;$B,$A,R}
+!hf                          ! method(s)
+$meth=hf
+$meth
+
+$str='../input/$A$B_$bset_$meth.mld'
+put,molden,$str
+
+---                         ! end of file
+
+
+
