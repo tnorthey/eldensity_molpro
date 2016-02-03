@@ -7,7 +7,7 @@ Main code: elDensity3.m
 #### Inputs
   
 *mldfile* (string): Path to Molden file output from Molpro.  
-*N* (integer): Cubic box symmetric about the origin is size(N,N,N). Default is N=79 (somewhat tested value).  
+*N* (integer, optional): Cubic box symmetric about the origin is size(N,N,N). Default is N=79 (somewhat tested value).  
 
 ## Description
 
