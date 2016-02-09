@@ -48,8 +48,8 @@
  
 
  Variables initialized (778), CPU time= 0.00 sec
- Commands  initialized (547), CPU time= 0.00 sec, 516 directives.
- Default parameters read. Elapsed time= 0.04 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 516 directives.
+ Default parameters read. Elapsed time= 0.18 sec
 
  Checking input...
  Passed
@@ -64,7 +64,7 @@
 
  **********************************************************************************************************************************
  LABEL *   A TEMPLATE                                                                    
- Linux-3.2.0-93-generic/sce-chem-c01105(x86_64) 64 bit serial version                    DATE: 26-Nov-15          TIME: 14:04:05  
+ Linux-3.2.0-98-generic/sce-chem-c01105(x86_64) 64 bit serial version                    DATE: 09-Feb-16          TIME: 12:27:15  
  **********************************************************************************************************************************
 
  SHA1:             960ce83de8be0427555cf121dea4debc26c720b5
@@ -150,7 +150,7 @@
  Memory used in sort:       0.56 MW
 
  SORT1 READ        2821. AND WROTE         982. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
- SORT2 READ         982. AND WROTE         982. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+ SORT2 READ         982. AND WROTE         982. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
 
  FILE SIZES:   FILE 1:     7.8 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     12.0 MBYTE
 
@@ -165,8 +165,8 @@
                                            T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
 
  PROGRAMS   *        TOTAL       INT
- CPU TIMES  *         0.12      0.06
- REAL TIME  *         0.15 SEC
+ CPU TIMES  *         0.12      0.04
+ REAL TIME  *         0.75 SEC
  DISK USED  *        12.25 MB      
  **********************************************************************************************************************************
 
@@ -244,12 +244,12 @@
                                          GEOM     BASIS   MCVARS     RHF  
 
  PROGRAMS   *        TOTAL        HF       INT
- CPU TIMES  *         0.13      0.01      0.06
- REAL TIME  *         0.16 SEC
+ CPU TIMES  *         0.13      0.01      0.04
+ REAL TIME  *         0.93 SEC
  DISK USED  *        12.25 MB      
  **********************************************************************************************************************************
    -->
-   <time start="14:04:05" end="14:04:06" cpu="0.13" system="0.03" real="0.16"/>
+   <time start="12:27:15" end="12:27:16" cpu="0.13" system="0.05" real="0.93"/>
    <storage units="megabyte" memory="65.84" sf="0.0" df="12.25" eaf="0.0"/>
   </jobstep><!--
  SETTING STR            =    ../input/S_6-31G_HF.mld   
@@ -279,7 +279,7 @@
  **********************************************************************************************************************************
  Variable memory released
   --><stm:metadataList>
-   <stm:metadata name="dc:date" content="2015-11-26T14:04:06-00:00"/>
+   <stm:metadata name="dc:date" content="2016-02-09T12:27:16-00:00"/>
    <stm:metadata name="dc:creator" content="s1267651"/>
    <stm:metadata name="dc:title" content="A TEMPLATE"/>
    <stm:metadata name="cmlm:insilico" content="Molpro"/>
@@ -288,22 +288,22 @@
    <version major="2012" minor="1" SHA="960ce83de8be0427555cf121dea4debc26c720b5"
      integer_bits="64" parallelism="serial">
     2012.1
-    <date year="2015" month="11" day="26" hour="14" minute="4" second="5">
-     2015-11-26T14:04:05
+    <date year="2016" month="2" day="9" hour="12" minute="27" second="15">
+     2016-02-09T12:27:15
     </date>
    </version>
    <licence id="edinburgh"/>
    <parallel processes="1" nodes="1" all_processes="1" openmp="1"/>
    <machine hostname="sce-chem-c01105" architecture="x86_64">
-    Linux-3.2.0-93-generic/sce-chem-c01105(x86_64) 64 bit serial version
-    <sysinfo name="cpu MHz" content="1600.000"/>
-    <sysinfo name="MemTotal" content="16321068 kB"/>
+    Linux-3.2.0-98-generic/sce-chem-c01105(x86_64) 64 bit serial version
+    <sysinfo name="cpu MHz" content="2900.000"/>
+    <sysinfo name="MemTotal" content="16321064 kB"/>
     <sysinfo name="vendor_id" content="GenuineIntel"/>
     <sysinfo name="cpu family" content="6"/>
     <sysinfo name="model name" content="Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz"/>
     <sysinfo name="flags"
       content="fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid"/>
-    <sysinfo name="MemTotal" content="16321068 kB"/>
+    <sysinfo name="MemTotal" content="16321064 kB"/>
     <sysinfo name="cache size" content="6144 KB"/>
     <sysinfo name="ncpu" content="4"/>
    </machine>

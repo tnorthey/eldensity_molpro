@@ -38,8 +38,8 @@
  put,molden,$str
  
 
- Variables initialized (778), CPU time= 0.01 sec
- Commands  initialized (547), CPU time= 0.00 sec, 516 directives.
+ Variables initialized (778), CPU time= 0.00 sec
+ Commands  initialized (547), CPU time= 0.01 sec, 516 directives.
  Default parameters read. Elapsed time= 0.04 sec
 
  Checking input...
@@ -55,7 +55,7 @@
 
  **********************************************************************************************************************************
  LABEL *   A TEMPLATE                                                                    
- Linux-3.2.0-93-generic/sce-chem-c01105(x86_64) 64 bit serial version                    DATE: 26-Nov-15          TIME: 14:04:03  
+ Linux-3.2.0-98-generic/sce-chem-c01105(x86_64) 64 bit serial version                    DATE: 09-Feb-16          TIME: 12:27:18  
  **********************************************************************************************************************************
 
  SHA1:             960ce83de8be0427555cf121dea4debc26c720b5
@@ -131,7 +131,7 @@
  Memory used in sort:       0.56 MW
 
  SORT1 READ         633. AND WROTE         282. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
- SORT2 READ         282. AND WROTE         282. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+ SORT2 READ         282. AND WROTE         282. INTEGRALS IN      1 RECORDS. CPU TIME:     0.01 SEC, REAL TIME:     0.00 SEC
 
  FILE SIZES:   FILE 1:     7.8 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     12.0 MBYTE
 
@@ -146,8 +146,8 @@
                                            T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
 
  PROGRAMS   *        TOTAL       INT
- CPU TIMES  *         0.09      0.02
- REAL TIME  *         0.12 SEC
+ CPU TIMES  *         0.10      0.03
+ REAL TIME  *         0.22 SEC
  DISK USED  *        12.23 MB      
  **********************************************************************************************************************************
 
@@ -223,8 +223,8 @@
                                          GEOM     BASIS   MCVARS     RHF  
 
  PROGRAMS   *        TOTAL        HF       INT
- CPU TIMES  *         0.10      0.01      0.02
- REAL TIME  *         0.12 SEC
+ CPU TIMES  *         0.11      0.01      0.03
+ REAL TIME  *         0.24 SEC
  DISK USED  *        12.23 MB      
  **********************************************************************************************************************************
  SETTING STR            =    ../input/N_6-31G_HF.mld   

@@ -24,8 +24,8 @@ function [bi,M,ga,ci,l,m,n,xx,yy,zz,ppmo,moocc,primlist,Atoms] = mldread2(mldfil
     % Atoms:
     while ischar(tline)    
         p = textscan(tline,'%*s %f %f %f %f %f');   
-        Atoms = [Atoms;cell2mat(p(1)) cell2mat(p(2)) cell2mat(p(3))...
-                 cell2mat(p(4)) cell2mat(p(5))];    % Atom Number, no of electrons, x, y, z        
+        Atoms = [Atoms;cell2mat(p(1)) cell2mat(p(2)) cell2mat(p(3))/au2ang...
+                 cell2mat(p(4))/au2ang cell2mat(p(5))/au2ang];    % Atom Number, no of electrons, x, y, z        
         br = strfind(tline,'[GTO]');           % Break on line containing '[GTO]'
         if ~isempty(br)
             break
@@ -179,7 +179,7 @@ function [bi,M,ga,ci,l,m,n,xx,yy,zz,ppmo,moocc,primlist,Atoms] = mldread2(mldfil
     % Desired Variables
     bi=H(:,3);M=H(:,4);ga=H(:,7);ci=H(:,8);
     l=H(:,9);m=H(:,10);n=H(:,11);
-    xx=H(:,14)/au2ang;yy=H(:,15)/au2ang;zz=H(:,16)/au2ang;
+    xx=H(:,14);yy=H(:,15);zz=H(:,16);
     
     % save('inputs')      % save to .mat file
     fclose(fid);
