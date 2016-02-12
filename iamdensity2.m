@@ -3,6 +3,8 @@ function [] = iamdensity2(mldfile,dx,xMin,xMax,yMin,yMax,zMin,zMax)
 % of each atomic radial electron density. 
 % Creates IAM molecular density on a 3D grid of size N^3.
 
+addpath('myfunctions')
+
 [~,title0,~]=fileparts(mldfile);
 title_=strcat(title0,'_elDensity_iam');
 
