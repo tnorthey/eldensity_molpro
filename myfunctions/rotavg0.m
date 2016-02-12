@@ -1,4 +1,4 @@
-function[Frot]=rotavg0(th,ph,Fq)
+function[Frot]=rotavg0(Fq,th,ph)
 
 %========================================
 % Calc. rot-avg,

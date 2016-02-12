@@ -1,4 +1,4 @@
-function [ Rho3D, xGrid, yGrid, zGrid ] = elDensity4(mldFileName,morange,dx,xMin,xMax,yMin,yMax,zMin,zMax,sph_on)
+function [ Rho3D, xGrid, yGrid, zGrid ] = elDensity4_cart(mldFileName,morange,dx,xMin,xMax,yMin,yMax,zMin,zMax)
 
 addpath('myfunctions')
 
@@ -21,14 +21,7 @@ Ny=length(yGrid);
 Nz=length(zGrid);
 Rho3D=zeros(Nx,Ny,Nz);
 
-% Cartesian or Spherical 
-if sph_on==0
-    [X,Y,Z]=meshgrid(xGrid,yGrid,zGrid);
-elseif sph_on==1
-    rmax=max(xGrid);   % not so general...
-    C=sphcoords(Nx,Ny,Nz,rmax);
-    X=C{1}; Y=C{2}; Z=C{3};
-end
+[X,Y,Z]=meshgrid(xGrid,yGrid,zGrid);
 
 % Normalisation factor in front of each prim. Gaussian
 normA=(2/pi)^0.75;
@@ -65,23 +58,8 @@ disp(title0)
 save(title0,'xGrid','yGrid','zGrid','Rho3D')
     
 % Total numer of electrons; dx^3 is the volume element
-if sph_on==0
-    dx=abs(xGrid(2)-xGrid(1));
-    totRho=sum(sum(sum(Rho3D)))*dx^3;
-elseif sph_on==1
-    r=linspace(0,rmax,Nx);
-    dr=r(2)-r(1);
-    th_=linspace(0,pi,Ny);
-    dth=th_(2)-th_(1);
-    th=[];
-    for i=1:Nx
-        th=[th;th_];
-    end
-    ph=linspace(0,2*pi,Nz);
-    dph=ph(2)-ph(1);
-    
-    totRho=sum(sum(sum(Rho3D,3).*sin(th),2).*r'.^2,1)*dr*dth*dph;
-end
+dx=abs(xGrid(2)-xGrid(1));
+totRho=sum(sum(sum(Rho3D)))*dx^3;
 disp('Integrated number of electrons: ');
 disp(num2str(totRho));
 disp('True number of electrons: ');
@@ -98,32 +76,3 @@ disp(num2str(sum(Atoms(:,2))));
 % keyboard
 
 return
-
-
-function[C]=sphcoords(Nx,Ny,Nz,rmax)
-%=======================================================================
-% spherical coordinate system
-nr=Nx;
-nth=Ny;
-nph=Nz;
-
-r=linspace(0,rmax,nr);       % radius
-th=linspace(0,pi,nth);       % theta
-ph=linspace(0,2*pi,nph);     % phi
-
-qx=zeros(nr,nth,nph);qy=qx;qz=qx;
-
-for k=1:nr                     % loop through spheres of non-zero radius r(kk)    
-    for i=1:nph                % phi loop, note: skips 2*pi as f(0)=f(2*pi)
-        for j=1:nth            % theta loop           
-            % Create x,y,z as a function of spherical coords...           
-            qx(k,j,i)=r(k)*sin(th(j))*cos(ph(i));
-            qy(k,j,i)=r(k)*sin(th(j))*sin(ph(i));
-            qz(k,j,i)=r(k)*cos(th(j));        
-        end
-    end  
-end
-C=cell(3,1); C{1}=qx; C{2}=qy; C{3}=qz; % coordinate matrix
-%=======================================================================
-return
-

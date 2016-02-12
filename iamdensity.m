@@ -18,15 +18,7 @@ Nat=size(Atoms,1);
 
 % keyboard
 
-load c_6-31g_hf_elDensity
-RhoC=Rho3D;
-xC=xGrid; yC=yGrid; zC=zGrid;
-load h_6-31g_hf_elDensity
-RhoH=Rho3D;
-xH=xGrid; yH=yGrid; zH=zGrid;
-load o_6-31g_hf_elDensity
-RhoO=Rho3D;
-xO=xGrid; yO=yGrid; zO=zGrid;
+load spline_atomic_radial
 
 % Create a grid
 xGrid=xMin:dx:xMax;
@@ -40,42 +32,41 @@ Ny=length(yGrid);
 Nz=length(zGrid);
 
 Rho3D=zeros(Nx,Ny,Nz);
+Rho3D=squeeze(Rho3D);
 for a=1:Nat
     disp(100*a/Nat)
-    X_=X+coords(a,1); Y_=Y+coords(a,2); Z_=Z+coords(a,3); 
+    r=sqrt((X-coords(a,1)).^2+(Y-coords(a,2)).^2+(Z-coords(a,3)).^2);
+    r(r>6)=6.0;  % > 6 is outside interpolant range
     if ZZ(a)==1
-        Rho_=interp3(xH,yH,zH,RhoH,X_,Y_,Z_);
-        Rho_(isnan(Rho_))=0;
-        Rho3D=Rho3D+Rho_;    
+        Rho_=ppval(pH,r);
     elseif ZZ(a)==6
-        Rho_=interp3(xC,yC,zC,RhoC,X_,Y_,Z_);
-        Rho_(isnan(Rho_))=0;
-        Rho3D=Rho3D+Rho_; 
+        Rho_=ppval(pC,r);
     elseif ZZ(a)==8
-        Rho_=interp3(xO,yO,zO,RhoO,X_,Y_,Z_); 
-        Rho_(isnan(Rho_))=0;
-        Rho3D=Rho3D+Rho_; 
+        Rho_=ppval(pO,r);        
     end
+    Rho3D=Rho3D+squeeze(Rho_);
 end
+clear Rho_
 
 save(['results/',title_],'Rho3D','xGrid','yGrid','zGrid','Atoms')
 
 % Total numer of electrons; dx^3 is the volume element
-dx=abs(xGrid(2)-xGrid(1));
 totRho=sum(sum(sum(Rho3D)))*dx^3;
 disp('Integrated number of electrons: ');
 disp(num2str(totRho));
 disp('True number of electrons: ');
 disp(num2str(sum(Atoms(:,2))));
-
-% plot
-contourf(zGrid,yGrid,squeeze(Rho3D(ceil(Nz/2),:,:)),100,'edgecolor','none');
-colorbar;
-xlabel('$y (a_0)$','interpreter','latex');
-ylabel('$x (a_0)$','interpreter','latex');
-axis equal
-axis tight
-
-keyboard
+% 
+% keyboard
+% 
+% % plot
+% contourf(zGrid,yGrid,log10(squeeze(Rho3D(:,ceil(Nz/2),:))),100,'edgecolor','none');
+% colorbar;
+% xlabel('$y (a_0)$','interpreter','latex');
+% ylabel('$x (a_0)$','interpreter','latex');
+% axis equal
+% axis tight
+% 
+% keyboard
 
 end
